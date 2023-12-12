@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Displaying a map layer with Leaflet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-qOOoOvG3hW3zJmgZka7i9oGDDI3qY3p60r6UPTF6C/oh6bm8QT6i+ZD00zif9ZRnTTm5I5FwOyEJn5mIJlo/Q==" crossorigin=""/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-+phJsgpEwpX9Z4wd4k8cYRgcbvV7fyKw1TktV7nzuFqRWvQcXfz0HbY8Y0/TGPhvUniqF6wHr6ns0lIkU+PAgA==" crossorigin=""></script>
+</head>
+<body>
+  <div id="mapid" style="height: 500px;"></div>
+  <script>
+    // set up the Leaflet map
+    var map = L.map('mapid').setView([40.7128, -74.0060], 13);
+
+    // add the tile layer from the API
+    var layerUrl = 'http://10.10.2.36:8000/layers/v1/nilaya/{z}/{x}/{y}.png?apikey=<your-api-key-here>';
+    var layer = L.tileLayer(layerUrl, {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+      maxZoom: 18
+    }).addTo(map);
+  </script>
+</body>
+</html>

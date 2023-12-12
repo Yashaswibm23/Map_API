@@ -1,0 +1,69 @@
+﻿
+
+var radioValue;
+get_Rate();
+
+$("input[type='radio']").click(function () {
+     radioValue = $("input[name='rating']:checked").val();
+  
+});
+
+
+$("#getrate").click(function () {
+
+    if (radioValue == undefined) {
+       $.alert("Please Rate");
+    }
+    else {
+        Insert_Rate(radioValue);
+    }
+   
+
+});
+
+
+
+
+
+function Insert_Rate(rate_val) {
+    $.ajax({
+        type: "POST",
+        url: "portal.asmx/Insert_Rate",
+        data: "{'rate_val':'" + rate_val + "'}",
+        contentType: "application/json; character=utf-8",
+        dataType: "json",
+        success: OnSuccess,
+        error: OnError
+
+    });
+
+    function OnSuccess(data, status) {
+        var obj = JSON.parse(data.d);
+       $.alert("Thank you for your Rating !!!!!!!");
+        get_Rate();
+    }
+    function OnError(request, status, error) {
+       $.alert(request.statusText);
+    }
+}
+
+function get_Rate() {
+    $.ajax({
+        type: "POST",
+        url: "portal.asmx/get_Rate",
+        data: "{}",
+        contentType: "application/json; character=utf-8",
+        dataType: "json",
+        success: OnSuccess,
+        error: OnError
+
+    });
+
+    function OnSuccess(data, status) {
+        var obj = JSON.parse(data.d);
+        $("#ovrate").text("Overall Rating : " + obj[0].rate);
+    }
+    function OnError(request, status, error) {
+       $.alert(request.statusText);
+    }
+}

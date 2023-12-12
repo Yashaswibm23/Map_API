@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Account</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+<style>
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        width: 80%;
+        margin-left:20px;
+        max-width: 600px;
+        margin-bottom: 40px;
+    }
+    td, th {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .btn{
+        margin-left:150px;
+    }
+    .button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #d8bf36;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #d8bf36;
+    }
+    @media screen and (max-width: 768px) {
+        table {
+            width: 90%;
+        }
+        td, th {
+            display: block;
+            padding: 6px;
+            border: none;
+        }
+        th {
+            display: none;
+        }
+        td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+</style>
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="">
+            <span>
+              Deduce Technologies 
+            </span>
+          </a>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" id="homeLink" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="doclink" href="http://10.10.5.171:200/api/doc/">Documentation <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="Studio" href=""> Studio</a>
+                </li>
+            <!-- 
+                <li class="nav-item">
+                  <a id="logoutLink" class="nav-link" href="" style="display:none;">Logout</a>
+                </li>-->
+               <!-- <li class="nav-item">
+                  <a class="nav-link" href="#contactLink">Contact Us</a>
+                </li>-->
+              </ul>
+            </div>
+           <!-- <div class="quote_btn-container ">
+              <a href="">
+                <img src="images/call.png" alt="">
+                <span>
+                  Call : +91 9870570056
+                </span>
+              </a>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>-->
+         <!--    <div class="quote_btn-container ">
+              <a href="login.html">
+                <img src="images/signin.png" style="width:50px;height:50px;margin-right:-25px;"> 
+              <h5 style="font-family:sans-serif;margin-bottom:20px;">Login</h5>
+             </a>
+              
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+ 
+            <div class="accout">
+              <!--   <p id="welcome" style="color:black;margin-top:-320px;">Hello <span id="user-email"> </span> Welcome To Deduce Technologies.</p>-->
+            </div>
+            <h1>ACCOUNT</h1>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <td data-label="Username" style="margin-top:-20px;"> <p id="welcome"><span id="user-email"> </span></p></td>
+                </tr>
+                <tr>
+                    <th>Plan</th>
+                    <td data-label="Plan">Current Plan</td>
+                </tr>
+                <tr>
+                    <th>Your API Key</th>
+                    <td data-label="Your API Key" ><p id="welcome"><span id="api-key"> </span></p></td>
+                </tr>
+            </table>
+            <div class="btn">
+                <a href="chengpass.html" class="button">Change Password</a> | 
+                <a href="#" id="logoutLink" class="button">Logout</a>
+            </div>
+          </div>
+
+  <div class="footer_bg" style="margin-top:250px;">
+    <!-- info section -->
+    <section class="info_section layout_padding2" style="background-color:#041858">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="info_logo">
+              <h3>
+                <img src="images/logo.png" alt="" style="width:10vw;">
+              
+              </h3>
+              <p style="color:#ffffff;">
+                Technology Firm focused on Maps Location, Data Annotation and Cloud Analytics.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info_links">
+              <h4 style="color:#ffffff;">
+                COMPANY
+              </h4>
+              <ul class="  ">
+                <li class=" ">
+                  <a class="" href="index.html" style="color:#ffffff;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="active">
+                  <a class="" href="about.html" style="color:#ffffff;"> About</a>
+                </li>
+                <li class="">
+                  <a class="" href="service.html" style="color:#ffffff;"> Services </a>
+                </li>
+                <li class="">
+                  <a class="" href="#contactLink" style="color:#ffffff;">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info_contact">
+              <h4 style="color:#ffffff;">
+                CONTACT DETAILS
+              </h4>
+              <a href="">
+                <div class="img-box">
+                  <img src="images/telephone-white.png" width="12px" alt="">
+                </div>
+                <p style="color:#ffffff;">
+                  +91 9870570056
+                </p>
+              </a>
+              <a href="">
+                <div class="img-box">
+                  <img src="images/envelope-white.png" width="18px" alt="">
+                </div>
+                <p style="color:#ffffff;"> <font style="font-size: 12px;">
+                  hello@deducetechnologies.com
+                </font>
+                </p>
+              </a>
+            </div>
+      
+        <div class="col-md-3">
+            <div class="info_form ">
+              <!-- <h4>
+                NEWSLETTER
+              </h4>
+              <form action="">
+                <input type="email" placeholder="Enter your email">
+                <button>
+                  Subscribe
+                </button>
+              </form>--> 
+              <div class="social_box">
+                <a href="">
+                  <img src="images/info-fb.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/info-twitter.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/info-linkedin.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/info-youtube.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <!-- end info_section -->
+
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <div class="container">
+        <p style="color:#ffffff;">
+          &copy; <span id="displayYear" style="color:#ffffff;"></span> Deduce Technologies - 
+          <a href="index.html" style="color:#ffffff;">All Rights Reserved.</a>
+        </p>
+      </div>
+    </section>
+    <!-- footer section -->
+
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+
+<script>
+    function preventBackButton() {
+        history.pushState(null, null, location.href);
+        window.addEventListener('popstate', function () {
+          history.pushState(null, null, location.href);
+        });
+      }
+        // Call preventBackButton function after logout
+      function logout() {
+        // code to logout user
+        preventBackButton();
+      }
+            const userEmail = localStorage.getItem('username');
+            const apiKey = localStorage.getItem('api-key');
+            const apiKeyElement = document.getElementById('api-key');
+            const userEmailElement = document.getElementById('user-email');
+            const logoutLink = document.getElementById('logoutLink');
+            // Check if there is an access token stored in local storage
+            if (localStorage.getItem('access_token')) {
+        
+                userEmailElement.style.display = 'inline-block';
+                apiKeyElement.innerHTML = apiKey;
+                //logoutLink.style.display = 'block';
+                userEmailElement.textContent = userEmail;
+            } else {
+                userEmailElement.style.display = 'none';
+                apiKeyElement.innerHTML = apiKey;
+            
+            }
+            logoutLink.addEventListener('click', () => {
+                localStorage.clear();
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+              });
+          
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Deduce Map</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link
+  href="libs/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<!-- JavaScript Bundle with Popper -->
+
+<script src="libs/jquery.js"></script>
+
+<script src="libs/v6.13.0-dist/ol.js"></script>
+<link rel="stylesheet" href="libs/v6.13.0-dist/ol.css" />
+
+<script src="libs/ol-layerswitcher-master/dist/ol-layerswitcher.js"></script>
+<link
+  rel="stylesheet"
+  href="libs/ol-layerswitcher-master/dist/ol-layerswitcher.css"
+/>
+
+<script src="libs/ol-geocoder/ol-geocoder.js"></script>
+<link rel="stylesheet" href="libs/ol-geocoder/ol-geocoder.css" />
+
+<script src="libs/ol-popup/ol-popup.js"></script>
+<link rel="stylesheet" href="libs/ol-popup/ol-popup.css" />
+
+<link rel="stylesheet" href="libs/jquery-ui-1.12.1/jquery-ui.css" />
+<script src="libs/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+<script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
+</head>
+<style>
+     
+  .button-container {
+    display: flex;
+    align-items: center;
+    margin-top:40px;
+  }
+  
+  .button-container p {
+    margin: 10;
+    font-size:20px;
+    
+  }
+  .btn1{
+    border: 2px solid #0000;
+    border-radius: 20px;
+    background: #d8bf36;
+    color: #ffffff;
+    width:120px;
+    display:inline-block;
+    padding:8px;
+    margin-left:270px;
+    }
+    
+    .btn2{
+    border: 2px solid #0000;
+    border-radius: 20px;
+    background: #d8bf36;
+    color: #ffffff;
+    width:120px;
+    display:inline-block;
+    padding:8px; 
+    margin-left:151px;
+    }
+    .btn11{
+      border: 2px solid #0000;
+      border-radius: 20px;
+      background: #d8bf36;
+      color: #ffffff;
+      width:120px;
+      display:inline-block;
+      padding:8px;
+      margin-left:250px;
+      }
+      
+      .btn22{
+      border: 2px solid #0000;
+      border-radius: 20px;
+      background: #d8bf36
+      color: #ffffff;
+      width:120px;
+      display:inline-block;
+      padding:8px; 
+      margin-left:135px;
+      }
+      .btn12{
+        border: 2px solid #0000;
+        border-radius: 20px;
+        background: #d8bf36;
+        color: #ffffff;
+        width:120px;
+        display:inline-block;
+        padding:8px;
+        margin-left:270px;
+        }
+        
+        .btn21{
+        border: 2px solid #0000;
+        border-radius: 20px;
+        background: #d8bf36
+        color: #ffffff;
+        width:120px;
+        display:inline-block;
+        padding:8px; 
+        margin-left:160px;
+        }  
+        .container_fluid #map{
+          border-style:solid;
+          border-color:grey;
+          border-radius:60px;
+          height:750px;
+          width:1600px;
+          background-color:#e6e6e6;
+          margin-top:20px;
+          margin-left:150px;
+      } 
+      .info_links a{
+        color: #041858;
+        text-decoration: none;
+      }
+     .info_links a:hover{
+      text-decoration: underline;
+     }
+     .info_contact a{
+      color: #041858;
+      text-decoration: none;
+     }
+     .info_contact a:hover{
+      text-decoration: underline;
+     }
+</style>
+
+<body style="background-color:#041858;">
+
+  <div class="hero_area" style="background:#041858;">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span><b>
+              Deduce Technologies
+            </span></b>
+          </a>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav " style="margin-left:400px;">
+                <li class="nav-item active">
+                  <a class="nav-link" id="homeLink" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">
+                  <a class="nav-link" id="aboutLink" href="about.html"> About</a>
+                </li>-->
+                <li class="nav-item">
+                  <a class="nav-link" id="apiDoc" href="api.html"> API </a>
+                </li>
+                <li class="nav-item">
+                  <a id="logoutLink" class="nav-link" href="#">Logout</a>
+                </li>
+               <!--  <li class="nav-item">
+                  <a class="nav-link" href="#contactLink">Contact Us</a>
+                </li>-->
+              </ul>
+            </div>
+            <div class="quote_btn-container ">
+             <!--  <a href="register.html">
+                 <img src="images/signin.png" style="width:50px;height:50px;margin-right:-25px;"> 
+               <h5 style="font-family:sans-serif;margin-bottom:20px;">Login</h5> 
+              </a> -->
+            </div>
+            <!-- <div class="container">
+              <h1 id="welcome-msg"></h1>
+              <button id="logout-btn">Logout</button>
+            </div>-->
+
+          </div>
+        </nav>
+      </div>
+    </header>
+  <div>
+<!-- 
+  <h1 style="color: #ffffff;margin-top:40px;"><b> <center> VIEW OUR MAP LAYER</center></b></h1>
+      <div class="container_fluid">
+        <div class="header">
+
+          <div id="map" class="map"></div>
+        </div>
+      </div>
+  <div id="popup"></div>
+
+  <h2 style="color: #ffffff;margin-top:50px;margin-left:200px;"><b> Select Layer:</b></h2>
+-->
+<div class="dev" style="background-color:#041858;">
+    <h1 style="color: #ffffff;margin-top:50px;"><b> <center> FOR DEVELOPERS </center></b></h1>
+
+    <h2 style="color: #ffffff;margin-top:40px;margin-left:200px;"><b>Our Services : </b></h2>
+
+   <h4 style="color: #ffffff;margin-top:30px;margin-left:200px;"><b>1. Layer's API </b></h4>
+
+
+   <div class="button-container">
+        <p style="margin-left:230px;color:#ffffff;"><b>- NILAYA </b></p>
+        <!-- <a href=""> <button class="btn1">ABOUT</button></a>--> 
+       <a href="nilayapi.html"><button class="btn2">VIEW MORE</button></a>
+  </div>
+  <div class="button-container">
+     <p style="margin-left:230px;color:#ffffff"><b>- PHOENIX </b></p>
+     <!-- <button class="btn11"> ABOUT</button>--> 
+     <a href="poiapi.html"><button style="background:#d8bf36; color:#ffffff;" class="btn22">VIEW MORE</button></a>
+  </div>
+  <div class="button-container">
+      <p style="margin-left:230px;color:#ffffff;"><b>- EV Dot </b></p>
+      <!--   <button class="btn12" > ABOUT</button>--> 
+     <a href="evapi.html"><button style="background:#d8bf36; color:#ffffff;" class="btn21">VIEW MORE</button></a>
+  </div>
+  <!-- <h4 style="margin-top:50px;margin-left:200px;color:#ffffff;"><b> 2. Geocoding API</b></h4>--> 
+</div>
+
+<section class="info_section layout_padding2" style="margin-top:100px;" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="info_logo">
+          <h3>
+            <img src="images/logo.png" alt="" style="width:10vw;">
+          
+          </h3>
+          <p style="color:#ffffff;">
+            Technology Firm focused on Maps Location, Data Annotation and Cloud Analytics.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_links">
+          <h4 style="color:#ffffff;">
+            COMPANY
+          </h4>
+          <ul class="">
+            <li class="">
+              <a class="" href="index.html" style="color:#ffffff;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="about.html" style="color:#ffffff;"> About</a>
+            </li>
+            <li class="">
+              <a class="" href="index.html" style="color:#ffffff;"> Services </a>
+            </li>
+            <li class="">
+              <a class="" href="#contactLink" style="color:#ffffff;">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_contact">
+          <h4 style="color:#ffffff;">
+            CONTACT DETAILS
+          </h4>
+          <a href="">
+            <div class="img-box">
+              <img src="images/telephone-white.png" width="12px" alt="">
+            </div>
+            <p style="color:#ffffff;">
+              +91 9870570056
+            </p>
+          </a>
+          <a href="">
+            <div class="img-box">
+              <img src="images/envelope-white.png" width="18px" alt="">
+            </div>
+            <p style="color:#ffffff;"> <font style="font-size: 12px;">
+              hello@deducetechnologies.com
+            </font>
+            </p>
+          </a>
+        </div>
+  
+    <div class="col-md-3">
+        <div class="info_form ">
+          <!-- <h4>
+            NEWSLETTER
+          </h4>
+          <form action="">
+            <input type="email" placeholder="Enter your email">
+            <button>
+              Subscribe
+            </button>
+          </form>--> 
+          <div class="social_box">
+          <!-- <a href="">
+              <img src="images/info-fb.png" alt="">
+            </a>-->
+            <a href="">
+              <img src="images/info-twitter.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/info-linkedin.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/info-youtube.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- 
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>-->
+  
+</body>
+<script>
+
+  const logoutLink = document.getElementById('logoutLink');
+  const homeLink = document.getElementById('homeLink');
+  const aboutLink = document.getElementById('aboutLink');
+  const apiDoc = document.getElementById('apiDoc');
+  
+  
+  // Check if there is an access token stored in local storage
+  if (localStorage.getItem('access_token')) {
+      // Show logout link and hide login link
+      logoutLink.style.display = 'block';
+      homeLink.style.display = 'block';
+      aboutLink.style.display = 'block';
+      apiDoc.style.display = 'block';
+
+  } else {
+      // Hide logout link and show login link
+      logoutLink.style.display = 'none';
+      homeLink.style.display = 'block';
+      aboutLink.style.display = 'block';
+      apiDoc.style.display = 'block';
+  
+  }
+  
+  // Add an event listener to the logout button
+  logoutLink.addEventListener('click', () => {
+    localStorage.clear();
+    localStorage.removeItem('Geoserver_Token');
+    sessionStorage.removeItem('Geoserver_Token');
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+  });
+  
+  </script>
+  <!-- <script src="libs/ol-popup/popper.min.js"></script>
+    <script src="libs/ol-popup/ol-popup.js"></script>
+    <script src="libs/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/map2.js"></script> -->
+</html>

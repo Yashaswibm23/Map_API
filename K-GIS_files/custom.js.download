@@ -1,0 +1,116 @@
+﻿$(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function () {
+    $("#back2Top").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
+var URLs = [
+    'http://localhost/a.htm',
+    'http://localhost/b.htm',
+    'http://localhost/c.htm',
+    'http://localhost/d.htm'
+];
+
+function loadNext() {
+
+    var frameWindow = document.getElementById('test').contentWindow;
+
+    if (URLs.length > 0) {
+        setTimeout(function () {
+            frameWindow.location.replace(URLs.shift());
+        }, 1000);
+    }
+}
+jQuery("#carousel1").owlCarousel({
+    autoplay: true,
+    lazyLoad: true,
+    loop: true,
+    margin: 20,
+    dots: false,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 4000,
+    smartSpeed: 4000,
+    nav: false,
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1024: {
+            items: 6
+        },
+        1366: {
+            items: 6
+        }
+    }
+});
+$(document).ready(function () {
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items: 4,
+        loop: true,
+        dots: false,
+        margin: 10,
+        lazyLoad: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 5000,
+        nav: false,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1024: {
+                items: 6
+            },
+            1366: {
+                items: 6
+            }
+        }
+    });
+    $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+    })
+    $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+    })
+})
+
+
+$(document).ready(function () {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+$('.modal ').insertAfter($('body'));
+
+
+document.cookie = 'cross-site-cookie=bar; SameSite=Strict';
+
+
+

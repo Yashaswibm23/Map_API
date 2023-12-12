@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDIA</title>
+    <!-- CSS only -->
+    <link
+      href="libs/bootstrap-5.1.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- JavaScript Bundle with Popper -->
+
+    <script src="libs/jquery.js"></script>
+
+    <script src="libs/v6.13.0-dist/ol.js"></script>
+    <link rel="stylesheet" href="libs/v6.13.0-dist/ol.css" />
+
+    <script src="libs/ol-layerswitcher-master/dist/ol-layerswitcher.js"></script>
+    <link
+      rel="stylesheet"
+      href="libs/ol-layerswitcher-master/dist/ol-layerswitcher.css"
+    />
+
+    <script src="libs/ol-geocoder/ol-geocoder.js"></script>
+    <link rel="stylesheet" href="libs/ol-geocoder/ol-geocoder.css" />
+
+    <script src="libs/ol-popup/ol-popup.js"></script>
+    <link rel="stylesheet" href="libs/ol-popup/ol-popup.css" />
+
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1/jquery-ui.css" />
+    <script src="libs/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="css/layers.css" />
+  </head>
+<style>
+  .active {
+    background-color:#041858;
+    font-color:#ffffff;
+  }
+</style>
+  <body>
+    <div class="container_fluid">
+      <div class="header">
+       
+        <a class="active" href="services.html">Services</a>
+        <!-- <div class="container-fluid mt-2">
+          <div class="row" style="justify-content: left">
+            <div class="col-lg-3 col-md-3 col-xl-3 col-sm-12"> -->
+              <!-- <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="house number, street name, locality, city, state, pincode"
+                  aria-label="Deduce Maps"
+                  aria-describedby="basic-addon2"
+                  id="searchbox"
+                />
+                <div class="input-group-append">
+                  <button
+                    id="action-button"
+                    onclick="resetSearch()"
+                    class="btn btn-info"
+                    type="button"
+                  >
+                    <img id="process" src="./icon/cros.png" alt="" />
+                  </button>
+                </div>
+              </div> -->
+              <div id="map" class="map"></div>
+              <!-- <div
+                class="input-group gary-boarder recomendations"
+                style="display: none"
+              ></div>
+            </div>
+          </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div id="popup"></div>
+
+    <script src="libs/ol-popup/popper.min.js"></script>
+    <script src="libs/ol-popup/ol-popup.js"></script>
+    <script src="libs/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/layers.js"></script>
+  </body>
+</html>

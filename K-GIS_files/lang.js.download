@@ -1,0 +1,61 @@
+﻿var setLang;
+$(document).ready(function () {
+    setLang = localStorage.getItem('user-lang');
+    if (!(setLang)) {
+        lang = 'Eng';
+        setLang = 'en';
+    }
+    function initLanguage() {
+        $('[data-lang-id]').each(function (e) {
+            if (setLang == "kn") {
+                langArr = lang_data_kn;
+            }
+            else {
+                langArr = lang_data_en;
+            }
+            tId = $(this).attr('data-lang-id');
+            if (!(langArr[tId] === undefined)) {
+                $(this).html(langArr[tId])
+            }
+        });
+        $('#myCarousel img').each(function (e) {
+            if (setLang == "kn") {
+                $(this).attr('src', $(this).attr('data-lang-kan-src'));
+            }
+            else {
+                $(this).attr('src', $(this).attr('data-lang-en-src'));
+            }
+        });
+        $('#kgisviewerlink img').each(function (e) {
+            if (setLang == "kn") {
+                $(this).attr('src', $(this).attr('data-lang-kan-src'));
+            }
+            else {
+                $(this).attr('src', $(this).attr('data-lang-en-src'));
+            }
+        });
+    }
+    $('#lang-switch-en').click(function (e) {
+        setLang = 'en';
+        initLanguage();
+        localStorage.setItem("user-lang", "en");
+        e.stopPropagation();
+        return false;
+    });
+    $('#lang-switch-kn').click(function (e) {
+        setLang = 'kn';
+        initLanguage();
+        localStorage.setItem("user-lang", "kn");
+        e.stopPropagation();
+        return false;
+    });
+    initLanguage();
+});
+$(document).ready(function () {
+    $(".selectlang").click(function () {
+        if (!$(this).hasClass('active')) {
+            $(".selectlang.active").removeClass("active");
+            $(this).addClass("active");
+        }
+    });
+});

@@ -1,0 +1,224 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.topnav {
+  /* overflow: hidden; */
+  position: absolute;
+  background-color: rgb(235, 235, 235);
+  height: 70px;
+  width: 100%;
+}
+
+.topnav img {
+  width: 35vw;
+  height: 60px;
+  margin: 5px 0px 5px 0px;
+}
+
+h3 {
+  color: black;
+  font-size: 25px;
+  /* padding: 75px 10px 10px 25px; */
+  font-weight: 750;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+  padding-left: 50px;
+  padding-right: 400px;
+  margin-left: 10px;
+  line-height: 2;
+}
+p::first-line {
+  margin-left: 75px;
+}
+
+.container {
+  position: absolute;
+  top: 200px;
+  left: 25px;
+}
+.topnav .active {
+  position: absolute;
+  right: 5vw;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 18px 16px 15px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.topnav .active:hover {
+  background-color: #ddd;
+  color: black;
+  height: 27px;
+}
+
+.topnav #logo {
+  float: left;
+  width: 150px;
+  height: 60px;
+  padding: 1px 25px;
+}
+
+.topnav #logout {
+  position: absolute;
+  top:8px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.topnav #logout2 {
+  position: absolute;
+  top:50px;
+  right: 20px;
+  width: 45px;
+  height: 20px;
+  text-decoration: none;
+  color:rgb(204, 3, 3);
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.topnav_container {
+position:absolute;
+top:70px;
+width:100vw;
+height: 75px;
+}
+button {
+  width: 100px;
+  height: 35px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  background-color: rgb(120, 120, 230);
+  border: 1px solid rgb(120, 120, 230);
+  border-radius: 3px;
+  margin: 25px 0px 5px 65px;
+}
+
+#nilayaError{
+  color: red;
+  margin-bottom: 80px;
+}
+#roadError{
+  color: red;
+  margin-bottom: 80px;
+}
+#phoenixError{
+  color: red;
+  margin-bottom: 80px;
+}
+#bld {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 25px 25px rgba(95, 95, 95, 0.486);
+}
+
+#roads {
+  position: absolute;
+  top: 300px;
+  right: 25px;
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 25px 25px rgba(95, 95, 95, 0.486);
+}
+
+#poi {
+  position: absolute;
+  top: 610px;
+  right: 25px;
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 25px 25px rgba(95, 95, 95, 0.486);
+}
+
+.topnav_container input {
+  position: relative;
+  top: 25px;
+  width: 40%;
+  height:40px;
+  left: 500px; 
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  padding: 10px;
+}
+
+.topnav_container label {
+  position: relative;
+  top: 28px;
+  left: 500px;
+  font-size: 25px; 
+  font-weight: 500;
+}
+
+.topnav_container input:focus {
+  border: 2px solid rgb(129, 167, 129);
+  border-radius: 5px;
+} 
+
+#information {
+  margin-left: 100px;
+}
+
+#errormsg{
+  position: absolute;
+  top: 70px;
+  left:550px;
+  color: red;
+  font-weight: 600;
+}
+
+#nilayapara{
+  font-family:"Lato", sans-serif; 
+}
+
+#roadpara{
+  font-family:"Lato", sans-serif; 
+}
+
+#phoenixpara{
+  font-family:"Lato", sans-serif; 
+}
+
+#nilayatitle{
+  font-family:"Lato", sans-serif; 
+}
+
+#phoenixtitle{
+  font-family:"Lato", sans-serif; 
+}
+
+#roadstitle{
+  font-family:"Lato", sans-serif; 
+}
+
+
+#information{
+  font-family:"Lato", sans-serif; 
+}

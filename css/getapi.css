@@ -1,0 +1,109 @@
+
+.submit {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 30px;
+  left: 400px;
+  /* display: inline-block; */
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.submit {
+  position: relative;
+  left:0px;
+  top:-3px;
+  width: 100px;
+  height: 41px;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  background: #d8bf36;
+}
+.submit:hover {
+  /* color: #f0094a; */
+  background: #d8bf36;
+  box-shadow: none;
+  
+}
+ /* .submit:before,
+.submit:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top:30px;
+  margin-top: 8px;
+  right: 0px;
+  width: 0;
+  background:#f0094a;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all; 
+} 
+.submit:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.submit:hover:before,
+.submit:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+} */
+
+#layerSelect {
+  width: 250px;
+  height: 41px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top:-90px;
+}
+
+#form_container {
+  position: relative;
+  left: 200px;
+  top:50px;
+  align-items: center;
+}
+
+#output {
+  align-items: center;
+  position: relative;
+  left: -600px;
+  top: 25px;
+  color:#ffffff;
+}
+
+/* .submit {
+  width: 100px;
+  height: 41px;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(251, 75, 2, 1) 100%
+  );
+} */
+
+#layerSelect option {
+  padding: 10px;
+  border-radius: 5px;
+}

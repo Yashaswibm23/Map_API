@@ -1,0 +1,661 @@
+﻿$(document).ready(function () {
+
+    $("#iframeid").hide();
+    $("#map").show();
+    $("#form-wrapper1").hide();
+    $("#form-wrapper2").hide();
+    $("#form-wrapper-buffer3").hide();
+
+    $("#and").hide();
+    $("#or").hide();
+    $("#and1").hide();
+    $("#or1").hide();
+    $("#blur").hide();
+    $("#panel").hide();
+
+    $("#feedback").hide();
+
+    $('.dropdown-submenu a.test').on("click", function (e) {
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+  
+
+
+});
+
+
+$(document).on('click', '#helpportal', function () {
+    e.preventDefault();
+    $("#resp2").hide();
+});
+
+$('#themebackward').on('click', function () {
+    $("#blur").show();
+});
+
+$('#home').on('click', function () {
+    window.location = "Base.aspx";
+});
+
+$("a#vieweditfeature").on("click", function () {
+    window.open('EditFormLog.aspx', '_blank');
+});
+
+
+
+$('#heatmaphome').on('click', function () {
+    $("#map").show();
+    $("#div1").show();
+    $("#div2").show();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#medicalform").hide();
+    $("#blur").show();
+
+});
+
+$('#satellitehome').on('click', function () {
+    $("#map").show();
+    $("#div1").show();
+    $("#div2").show();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#medicalform").hide();
+    $("#blur").hide();
+});
+$('#sectorhome').on('click', function () {
+    $("#map").show();
+    $("#div1").show();
+    $("#div2").show();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#medicalform").hide();
+    $("#blur").hide();
+});
+$('#themeshome').on('click', function () {
+    $("#map").show();
+    $("#div1").show();
+    $("#div2").show();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#medicalform").hide();
+    $("#blur").hide();
+});
+$('#explorehome').on('click', function () {
+    $("#map").show();
+    $("#div1").show();
+    $("#div2").show();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#medicalform").hide();
+    $("#blur").hide();
+});
+
+
+$('.collapse').on('shown.bs.collapse', function () {
+    $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+}).on('hidden.bs.collapse', function () {
+    $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+});
+
+$("#popup").click(function () {
+    $("#div2").hide();
+    $("#map").hide();
+    $("#iframeid").hide();
+    $("#feedback").show();
+    $("#blur").hide();
+});
+
+
+$("#helpportal").click(function () {
+    $("#map").hide();
+    $("#div2").hide();
+    $("#iframeid").hide();
+    $("#feedback").hide();
+    $("#blur").hide();
+
+});
+
+
+//******************************Documents******************************
+
+$("a.visiondocument").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/KGISVisionDocument.pdf', '_blank');
+});
+
+$("a.stakeholder").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/KGIS-STAKEHOLDER-BOOK.pdf', '_blank');
+});
+
+$("a.spatialframe").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/Spatial frameworkdoc.pdf', '_blank');
+});
+
+$("a.standardvolume").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/K-GIS Standards Volume-1part-1.pdf', '_blank');
+});
+
+$("a.standardvolume1").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/5.3 K-GIS Volume I Part 2 - Database Schema Design  (1).pdf', '_blank');
+});
+
+$("a.schedule").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/KGIS-Project%20Schedule.pdf', '_blank');
+});
+
+
+
+$("a.statusreport").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/KGISStatus-31Aug2017.pdf', '_blank');
+});
+$("a.statusreport1").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/Documents/KGISReport-APRIL2016-MARCH2018.pdf', '_blank');
+});
+
+
+
+
+
+
+//******************************Soil Moisture Condition Reports******************************
+
+$("a.soilmoisture1").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/07Jan2017.pdf', '_blank');
+});
+$("a.soilmoisture2").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/25Nov2016.pdf', '_blank');
+});
+$("a.soilmoisture3").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/17Oct2016.pdf', '_blank');
+});
+$("a.soilmoisture4").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/12May2016.pdf', '_blank');
+});
+
+$("a.soilmoisture5").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/07May2016.pdf', '_blank');
+});
+
+$("a.soilmoisture6").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/03May2016.pdf', '_blank');
+});
+$("a.soilmoisture7").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/28April2016.pdf', '_blank');
+});
+
+$("a.soilmoisture8").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/18April2016.pdf', '_blank');
+});
+$("a.soilmoisture9").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/30March2016.pdf', '_blank');
+});
+
+$("a.soilmoisture10").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/SoilMoistureReport/15March2016.pdf', '_blank');
+});
+
+
+//******************************HelpDocuments******************************
+
+$("a.nearbyplaces").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/NearByEmergency.pdf', '_blank');
+});
+
+$("a.sericulture").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/SericultureDataCollector.PDF', '_blank');
+});
+
+$("a.rdpr").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/RDPRHelpDoc.pdf', '_blank');
+});
+
+$("a.ahvs").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/AHVS.pdf', '_blank');
+});
+
+
+$("a.anganawadi").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/AnganawadiDataCollector.pdf', '_blank');
+});
+
+
+$("a.itidepartment").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/ITIDataCollector.pdf', '_blank');
+});
+
+
+$("a.fisheriesdepartment").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/Fisheries.pdf', '_blank');
+});
+
+
+$("a.rationshop").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/RationshopHelpDocument.pdf', '_blank');
+});
+
+$("a.kspcbdepartment").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/Kspcb.pdf', '_blank');
+});
+
+$("a.ksaps").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/KSAPSHelpDocument.pdf', '_blank');
+});
+
+$("a.wrddepartment").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/NeeravariAastiHelpDoc.pdf', '_blank');
+});
+
+$("a.polio").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/PolioBoothHelpDoc.pdf', '_blank');
+});
+
+$("a.antarjala").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/GroundwaterHelpDoc.pdf', '_blank');
+});
+
+$("a.chunavanamobile").on("click", function () {
+    window.open('https://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/ChunavanaHelpDoc.pdf', '_blank');
+});
+
+$("a.KPSIS").on("click", function () {
+    window.open('http://kgis.ksrsac.in/kgisdocuments/MobileHelpFiles/KPSIS_Help_Document.pdf', '_blank');
+});
+
+
+$("a.viewfeedback").on("click", function () {
+    window.open('Feedback.aspx', '_blank');
+});
+$("a.WriteFeedback").on("click", function () {
+    window.open('insertfeedback.aspx', '_blank');
+});
+
+
+
+
+$("#metadata").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+$("#host").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+$("#citizen").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+$("#vehicle").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+$("#online").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+$("#externalload").click(function () {
+    $.alert('Sorry,Development under progress will be available soon');
+
+});
+
+
+$("#edu").click(function () {
+    $("#educa").css('display', "");
+    $("#health").css('display', "none");
+    $("#school").css('display', "none");
+
+});
+
+
+$("#hlt").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "");
+    $("#school").css('display', "none");
+    $("#hlt1").show();
+    $("#hlt2").show();
+});
+$("#hlt1").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "");
+    $("#school").css('display', "none");
+    $("#phc").css('display', "none");
+    $("#chc").css('display', "");
+
+});
+$("#hlt2").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "");
+    $("#school").css('display', "none");
+    $("#phc").css('display', "");
+    $("#chc").css('display', "none");
+
+});
+
+$("#pssch").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").hide();
+    $("#cat").hide();
+    $("#psed1").css('display', "");
+    $("#unis").hide();
+    $("#enggclg").hide();
+    $("#poly").hide();
+    $("#state").hide();
+
+});
+
+
+
+$("#psed").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").show();
+    $("#psed1").css('display', "");
+    $("#sm").hide();
+    $("#cat").hide();
+    $("#unis").hide();
+    $("#enggclg").hide();
+
+});
+$("#psed1").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").show();
+    $("#unis").hide();
+    $("#cat").hide();
+    $("#enggclg").hide();
+
+});
+$("#unsity").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").hide();
+    $("#unis").show();
+    $("#enggclg").hide();
+
+});
+$("#egclg").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").hide();
+    $("#unis").hide();
+    $("#enggclg").show();
+
+});
+$("#ploytech").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").hide();
+    $("#unis").hide();
+    $("#enggclg").hide();
+    $("#poly").show();
+    $("#state").hide();
+
+});
+$("#stat").click(function () {
+    $("#educa").css('display', "none");
+    $("#health").css('display', "none");
+    $("#school").css('display', "");
+    $("#prm").hide();
+    $("#sm").hide();
+    $("#unis").hide();
+    $("#enggclg").hide();
+    $("#poly").hide();
+    $("#state").show();
+
+});
+
+$("#external").click(function () {
+    $("#map").hide();
+    $("#div2").hide();
+    $("#bhuvan").hide();
+    $("#feedback").hide();
+    $("#editprofile").hide();
+    $("#forgot").hide();
+    $("#portalhelp").hide();
+    $("#iframeid").show();
+    $("#dashboarddiv").hide();
+
+});
+$("#loadexternal").click(function () {
+    $("#map").hide();
+    $("#div2").hide();
+    $("#bhuvan").hide();
+    $("#feedback").hide();
+    $("#editprofile").hide();
+    $("#forgot").hide();
+    $("#portalhelp").hide();
+    $("#iframeid").show();
+    $("#dashboarddiv").hide();
+
+});
+
+$("#app").click(function () {
+    $("#map").hide();
+    $("#div2").hide();
+    $("#bhuvan").hide();
+    $("#feedback").hide();
+    $("#editprofile").hide();
+    $("#forgot").hide();
+    $("#portalhelp").hide();
+    $("#iframeid").show();
+    $("#dashboarddiv").hide();
+});
+
+$("#togg").click(function () {
+    $("#venkey").hide();
+});
+$("#togg1").click(function () {
+    $("#venkey").show();
+});
+$("#button2").click(function () {
+    $("#form-wrapper1").show();
+    $("#butto1").hide();
+    $("#and").show();
+    $("#or").show();
+    $("#button2").hide();
+    $("#button5").show();
+    $("#and1").hide();
+    $("#or1").hide();
+    $("#butt2").show();
+    $('#and').css('background', 'url("symbols/And2-Btn.png")');
+    $('#or').css('background', 'url("symbols/Or2-Btn.png")');
+
+});
+$("#togg3").click(function () {
+    $("#form-wrapper1").hide();
+});
+
+
+$("#button4").click(function () {
+    $("#form-wrapper1").hide();
+});
+$("#button5").click(function () {
+    $("#form-wrapper2").show();
+    $("#butt2").hide();
+    $("#and1").show();
+    $("#or1").show();
+    $("#button5").hide();
+    $('#and1').css('background', 'url("symbols/And2-Btn.png")');
+    $('#or1').css('background', 'url("symbols/Or2-Btn.png")');
+});
+
+$("#button6").click(function () {
+    $("#form-wrapper2").hide();
+    $("#form-wrapper1").hide();
+    $("#butto1").show();
+    $("#and").hide();
+    $("#or").hide();
+    $("#button2").show();
+});
+$("#button7").click(function () {
+    $("#form-wrapper2").hide();
+    $("#butt2").show();
+    $("#and1").hide();
+    $("#or1").hide();
+    $("#button5").show();
+});
+
+
+$('.andor').click(function () {
+    SelectedAnd_Or = $(this).attr("id");
+    if (SelectedAnd_Or == 'and') {
+        $('#and').css('background', 'url("symbols/And1-Btn.png")');
+        $('#or').css('background', 'url("symbols/Or-Btn.png")');
+    }
+    if (SelectedAnd_Or == 'or') {
+        $('#or').css('background', 'url("symbols/Or1-Btn.png")');
+        $('#and').css('background', 'url("symbols/And-Btn.png")');
+    }
+});
+
+$('.andor1').click(function () {
+    SelectedAnd_Or1 = $(this).attr("name");
+
+    if (SelectedAnd_Or1 == 'and') {
+        $('#and1').css('background', 'url("symbols/And1-Btn.png")');
+        $('#or1').css('background', 'url("symbols/Or-Btn.png")');
+    }
+    if (SelectedAnd_Or1 == 'or') {
+        $('#or1').css('background', 'url("symbols/Or1-Btn.png")');
+        $('#and1').css('background', 'url("symbols/And-Btn.png")');
+    }
+});
+
+//***Simple buffer Hide and show play ******
+
+$("#buffAddselection1").click(function () {
+    $("#buffeSelection2").show();
+    $("#bufferdiv2").show();
+    $("#buffAddselection2").show();
+    $("#BuffCancelSelection1").show();
+});
+
+$("#buffAddselection2").click(function () {
+    $("#buffeSelection3").show();
+    $("#bufferdiv3").show();
+    $("#BuffCancelSelection2").show();
+});
+$("#BuffCancelSelection1").click(function () {
+    $("#bufferdiv2").hide();
+    $("#buffeSelection2").hide();
+    $("#BuffCancelSelection1").hide();
+    $("#buffAddselection2").hide();
+    $('#buffeSelection2').val("");
+    $("#buffeSelection3").hide();
+    $("#bufferdiv3").hide();
+    $("#BuffCancelSelection2").hide();
+    $('#buffeSelection3').val("1");
+
+});
+$("#BuffCancelSelection2").click(function () {
+    $("#buffeSelection3").hide();
+    $("#bufferdiv3").hide();
+    $("#BuffCancelSelection2").hide();
+    $('#buffeSelection3').val("1");
+
+});
+$("#BuffAddselection11").click(function () {
+    $("#form-wrapper-buffer3").show();
+});
+$("#BuffCancelselection11").click(function () {
+    $("#form-wrapper-buffer3").hide();
+});
+
+
+$("#attrQuery").click(function () {
+    if (heatmapLayer != undefined) {
+        map.removeLayer(heatmapLayer);
+    }
+
+    if (clusterLayer != undefined) {
+        map.removeLayer(clusterLayer);
+    }
+    for (var i = 0; i < removableLayersArr.length; i++) {
+        map.removeLayer(removableLayersArr[i]);
+    }
+    $("#queries").show();
+    $("#buffer").hide();
+    $("#Cmplxbuffer").hide();
+    $("#Theme_transp").hide();
+});
+
+
+
+$("#NearBy").click(function () {
+    if (heatmapLayer != undefined) {
+        map.removeLayer(heatmapLayer);
+    }
+
+    if (clusterLayer != undefined) {
+        map.removeLayer(clusterLayer);
+    }
+    for (var i = 0; i < removableLayersArr.length; i++) {
+        map.removeLayer(removableLayersArr[i]);
+    }
+    $("#Cmplxbuffer").hide();
+    $("#queries").hide();
+    $("#Theme_transp").hide();
+
+
+    if (AreaofIntid == "" || SelectedAreaofInt == "") {
+        $.alert('Please Select Area of Interest');
+    }
+    else {
+        $("#buffer").show();
+    }
+});
+
+
+$("#CmplxBuff").click(function () {
+    if (heatmapLayer != undefined) {
+        map.removeLayer(heatmapLayer);
+    }
+
+    if (clusterLayer != undefined) {
+        map.removeLayer(clusterLayer);
+    }
+    for (var i = 0; i < removableLayersArr.length; i++) {
+        map.removeLayer(removableLayersArr[i]);
+    }
+    $("#buffer").hide();
+    $("#queries").hide();
+    $("#Theme_transp").hide();
+    if (AreaofIntid == "" || SelectedAreaofInt == "") {
+        $.alert('Please Select Area of Interest');
+    }
+    else {
+        $("#Cmplxbuffer").show();
+    }
+});
+
+//***********Theme selection*****
+$("#Transparency").click(function () {
+    $("#queries").hide();
+    $("#buffer").hide();
+    $("#Cmplxbuffer").hide();
+    $("#Theme_transp").show();
+    if (heatmapLayer != undefined) {
+        map.removeLayer(heatmapLayer);
+    }
+
+    if (clusterLayer != undefined) {
+        map.removeLayer(clusterLayer);
+    }
+    for (var i = 0; i < removableLayersArr.length; i++) {
+        map.removeLayer(removableLayersArr[i]);
+    }
+});
